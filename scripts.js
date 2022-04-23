@@ -22,3 +22,14 @@ alert("You must write something !");
  }
 
  li.addEventListener("click",crossOut);
+
+ //3(i). Adding the delete button "X": 
+ let crossOutButton = document.createElement("crossOutButton"); //does not exist already in the HTML file.
+ crossOutButton.appendChild(document.createTextNode("X")) //used to provide text to an element.
+ // This method contains the text values as parameter which is of string type.
+ li.appendChild(crossOutButton);
+
+ crossOutButton.addEventListener("click", deleteListItem);
+
+ 
+ //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
